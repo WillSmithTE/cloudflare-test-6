@@ -14,10 +14,6 @@ export const loader = async ({ context }: LoaderFunctionArgs) => {
   return json({
     ENV: {
       GA_ID: "xyz",
-      ENV: "local",
-      GOOGLE_MAPS_KEY: "AIzab1i2312",
-      BLOG_GOOGLE_AUTH_CLIENT_ID: "something.apps.googleusercontent.com",
-      BASE_URL: "http://localhost:3333",
     },
   });
 };

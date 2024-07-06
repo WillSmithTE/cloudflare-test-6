@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
+import { lazy } from "react";
+// import Blog from "~/BlogComponent";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,10 +11,12 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
+const Blog = lazy(() => import("~/BlogComponent"));
 
 export default function Index() {
   return (
     <div className="font-sans p-4">
+      <Blog />
       <h1 className="text-3xl">Welcome to Remix on Cloudflare</h1>
       <ul className="list-disc mt-4 pl-6 space-y-2">
         <li>
